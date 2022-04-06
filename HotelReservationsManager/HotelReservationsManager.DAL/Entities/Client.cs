@@ -1,8 +1,7 @@
 ﻿namespace HotelReservationsManager.DAL.Entities
 {
-    public class Client
+    public class Client : BaseEntity
     {
-        public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNum { get; set; }

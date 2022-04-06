@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace HotelReservationsManager.DAL.Data
 {
-    class HotelDbContext : DbContext
+    public class HotelDbContext : DbContext
     {
         public DbSet<Client> Clients { get; set; }
         public DbSet<Reservation> Reservations { get; set; }

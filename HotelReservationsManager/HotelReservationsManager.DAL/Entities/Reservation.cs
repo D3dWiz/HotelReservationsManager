@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace HotelReservationsManager.DAL.Entities
 {
-    public class Reservation
+    public class Reservation : BaseEntity
     {
         public Reservation()
         {
@@ -13,7 +13,6 @@ namespace HotelReservationsManager.DAL.Entities
 
         private decimal _price = 0;
         
-        public int Id { get; set; }
         public int RoomNum { get; set; }
         public virtual ICollection<Client> People { get; set; }
         public DateTime Accommodation { get; set; }

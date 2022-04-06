@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelReservationsManager.DAL.Abstractions
 {
-    interface IRepository<T>
+    public interface IRepository<T>
     {
         T Get(Func<T, bool> predicate);
         T GetById(int id);

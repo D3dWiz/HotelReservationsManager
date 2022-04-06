@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HotelReservationsManager.DAL.Migrations
 {
     [DbContext(typeof(HotelDbContext))]
-    [Migration("20220405194638_Initial")]
+    [Migration("20220406160651_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
