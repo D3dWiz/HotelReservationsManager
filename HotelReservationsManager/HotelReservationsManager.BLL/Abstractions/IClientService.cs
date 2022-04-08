@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace HotelReservationsManager.BLL.Abstractions
 {
-    interface IClientService
+    public interface IClientService
     {
         //string FirstName
         //string LastName

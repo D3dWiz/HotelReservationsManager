@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace HotelReservationsManager.BLL.Abstractions
 {
-    interface IRoomService
+    public interface IRoomService
     {
         //Capacity
         //Type

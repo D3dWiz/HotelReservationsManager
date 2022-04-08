@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelReservationsManager.BLL.Abstractions
 {
-    interface IReservationService
+    public interface IReservationService
     {
         //int RoomNum
         //ICollection<Client> People

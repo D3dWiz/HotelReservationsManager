@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelReservationsManager.BLL.Abstractions
 {
-    interface IUserService
+    public interface IUserService
     {
         //string Username
         //string Password
