@@ -3,9 +3,6 @@ using HotelReservationsManager.DAL.Abstractions;
 using HotelReservationsManager.DAL.Entities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HotelReservationsManager.BLL.Services
 {
@@ -74,6 +71,7 @@ namespace HotelReservationsManager.BLL.Services
             user.Email = email;
             user.Appointment = appointment;
             user.IsActive = isActive;
+
             return _userRepository.Update(user);
         }
     }
