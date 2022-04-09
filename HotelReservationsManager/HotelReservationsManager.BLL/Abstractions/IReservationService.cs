@@ -10,13 +10,13 @@ namespace HotelReservationsManager.BLL.Abstractions
         //ICollection<Client> People
         //DateTime Accommodation
         //DateTime Release
-        //bool IsBreakfast
+        //bool HasBreakfast
         //bool IsAllInclusive
         //Room Room
         //decimal Price
 
         bool CreateReservation(int roomNum, DateTime accommodation, DateTime release,
-            bool isBreakfast, bool isAllInclusive, Room room);
+            bool hasBreakfast, bool isAllInclusive, Room room);
 
         List<Reservation> GetReservations();
 

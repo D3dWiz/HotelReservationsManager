@@ -14,14 +14,14 @@ namespace HotelReservationsManager.BLL.Services
             _reservationRepository = reservationRepository;
         }
 
-        public bool CreateReservation(int roomNum, DateTime accommodation, DateTime release, bool isBreakfast, bool isAllInclusive, Room room)
+        public bool CreateReservation(int roomNum, DateTime accommodation, DateTime release, bool hasBreakfast, bool isAllInclusive, Room room)
         {
             var reservation = new Reservation()
             {
                 RoomNum = roomNum,
                 Accommodation = accommodation,
                 Release = release,
-                IsBreakfast = isBreakfast,
+                HasBreakfast = hasBreakfast,
                 IsAllInclusive = isAllInclusive,
                 Room = room
             };

@@ -17,7 +17,7 @@ namespace HotelReservationsManager.DAL.Entities
         public virtual ICollection<Client> People { get; set; }
         public DateTime Accommodation { get; set; }
         public DateTime Release { get; set; }
-        public bool IsBreakfast { get; set; }
+        public bool HasBreakfast { get; set; }
         public bool IsAllInclusive { get; set; }
         public virtual Room Room { get; set; }
 

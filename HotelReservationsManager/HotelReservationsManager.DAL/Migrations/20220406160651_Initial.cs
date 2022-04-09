@@ -57,7 +57,7 @@ namespace HotelReservationsManager.DAL.Migrations
                     RoomNum = table.Column<int>(type: "int", nullable: false),
                     Accommodation = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Release = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    IsBreakfast = table.Column<bool>(type: "bit", nullable: false),
+                    HasBreakfast = table.Column<bool>(type: "bit", nullable: false),
                     IsAllInclusive = table.Column<bool>(type: "bit", nullable: false),
                     RoomId = table.Column<int>(type: "int", nullable: true),
                     Price = table.Column<decimal>(type: "decimal(18,2)", nullable: false)
