@@ -1,3 +1,7 @@
+using HotelReservationsManager.DAL.Abstractions;
+using HotelReservationsManager.DAL.Repositories;
+using HotelReservationsManager.BLL.Abstractions;
+using HotelReservationsManager.BLL.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,6 +29,11 @@ namespace HotelReservationsManager.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<DbContext>(options => options.UseSqlServer(Configuration["ConnectionStrings:Default"]));
+            services.AddTransient(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient<IClientService, ClientService>();
+            services.AddTransient<IReservationService, ReservationService>();
+            services.AddTransient<IRoomService, RoomService>();
+            services.AddTransient<IUserService, UserService>();
             services.AddControllersWithViews();
         }
 
