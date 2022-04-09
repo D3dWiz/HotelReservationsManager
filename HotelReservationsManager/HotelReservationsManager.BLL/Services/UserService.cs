@@ -16,7 +16,7 @@ namespace HotelReservationsManager.BLL.Services
         }
 
         public bool CreateUser(string username, string password, string firstName,
-            string secondName, string lastName, int identificationNumber,
+            string middleName, string lastName, int identificationNumber,
             string phoneNum, string email, DateTime appointment, bool isActive)
         {
             var user = new User()
@@ -24,7 +24,7 @@ namespace HotelReservationsManager.BLL.Services
                 Username = username,
                 Password = password,
                 FirstName = firstName,
-                SecondName = secondName,
+                MiddleName = middleName,
                 LastName = lastName,
                 IdentificationNumber = identificationNumber,
                 Phone = phoneNum,
@@ -58,14 +58,14 @@ namespace HotelReservationsManager.BLL.Services
         }
 
         public bool UpdateUser(int userId, string username, string password,
-            string firstName, string secondName, string lastName,
+            string firstName, string middleName, string lastName,
             int identificationNumber, string phoneNum, string email, DateTime appointment, bool isActive)
         {
             var user = _userRepository.GetById(userId);
             user.Username = username;
             user.Password = password;
             user.FirstName = firstName;
-            user.SecondName = secondName;
+            user.MiddleName = middleName;
             user.LastName = lastName;
             user.IdentificationNumber = identificationNumber;
             user.Phone = phoneNum;

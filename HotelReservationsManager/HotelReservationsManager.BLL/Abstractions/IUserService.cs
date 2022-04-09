@@ -9,7 +9,7 @@ namespace HotelReservationsManager.BLL.Abstractions
         //string Username
         //string Password
         //string FirstName
-        //string SecondName
+        //string MiddleName
         //string LastName
         //int IdentificationNumber
         //string Phone
@@ -19,11 +19,11 @@ namespace HotelReservationsManager.BLL.Abstractions
         //DateTime? Dismissal
 
         bool CreateUser(string username, string password, string firstName,
-            string secondName, string lastName, int identificationNumber,
+            string middleName, string lastName, int identificationNumber,
             string phoneNum, string email, DateTime appointment, bool isActive);
 
         bool UpdateUser(int userId, string username, string password, string firstName,
-            string secondName, string lastName, int identificationNumber,
+            string middleName, string lastName, int identificationNumber,
             string phoneNum, string email, DateTime appointment, bool isActive);
 
         List<User> GetUsers();
