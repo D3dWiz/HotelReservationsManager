@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
-namespace HotelReservationsManager.Web.Models.ViewModels.Client
+﻿using HotelReservationsManager.Web.Models.ViewModels.Reservations;
+using System.Collections.Generic;
+
+namespace HotelReservationsManager.Web.Models.ViewModels.Clients
 {
-    public class ClientDetailsViewModel
+    public class ClientsDetailsViewModel
     {
         public string Id { get; set; }
         public string FullName { get; set; }

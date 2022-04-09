@@ -1,13 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31112.23
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationsManager.DAL", "HotelReservationsManager.DAL\HotelReservationsManager.DAL.csproj", "{ED4532BC-6642-4AE1-A0BE-18A6B82C1121}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservationsManager.BLL", "HotelReservationsManager.BLL\HotelReservationsManager.BLL.csproj", "{DE97A605-5AA8-48FE-9E7E-8337A0C5A4BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationsManager.BLL", "HotelReservationsManager.BLL\HotelReservationsManager.BLL.csproj", "{DE97A605-5AA8-48FE-9E7E-8337A0C5A4BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservationsManager", "HotelReservationsManager\HotelReservationsManager.csproj", "{2F4CF7FE-BBB2-4877-AC38-BF7B9B973EAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationsManager", "HotelReservationsManager\HotelReservationsManager.csproj", "{2F4CF7FE-BBB2-4877-AC38-BF7B9B973EAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservationsManager.Web", "HotelReservationsManager.Web\HotelReservationsManager.Web.csproj", "{A38F58F6-2650-4A3E-AF70-1A86DCED2402}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{2F4CF7FE-BBB2-4877-AC38-BF7B9B973EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F4CF7FE-BBB2-4877-AC38-BF7B9B973EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F4CF7FE-BBB2-4877-AC38-BF7B9B973EAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A38F58F6-2650-4A3E-AF70-1A86DCED2402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A38F58F6-2650-4A3E-AF70-1A86DCED2402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A38F58F6-2650-4A3E-AF70-1A86DCED2402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A38F58F6-2650-4A3E-AF70-1A86DCED2402}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

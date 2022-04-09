@@ -9,9 +9,9 @@ namespace HotelReservationsManager
     {
         private static void Main(string[] args)
         {
-            HotelDbContext context = new HotelDbContext();
-            IRepository<User> userRepo = new Repository<User>(context);
-            IRepository<Client> clientRepo = new Repository<Client>(context);
+            //HotelDbContext context = new HotelDbContext();
+            //IRepository<User> userRepo = new Repository<User>(context);
+            //IRepository<Client> clientRepo = new Repository<Client>(context);
 
             //string Username
             //string Password

@@ -7,7 +7,7 @@ namespace HotelReservationsManager.BLL.Abstractions
     public interface IReservationService
     {
         //int RoomNum
-        //ICollection<Client> People
+        //ICollection<ClientReservations> Clients
         //DateTime Accommodation
         //DateTime Release
         //bool HasBreakfast

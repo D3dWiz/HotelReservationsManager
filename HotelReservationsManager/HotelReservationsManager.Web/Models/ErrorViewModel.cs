@@ -1,5 +1,3 @@
-using System;
-
 namespace HotelReservationsManager.Web.Models
 {
     public class ErrorViewModel

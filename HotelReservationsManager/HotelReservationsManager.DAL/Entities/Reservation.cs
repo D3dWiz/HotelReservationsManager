@@ -7,14 +7,14 @@ namespace HotelReservationsManager.DAL.Entities
     {
         public Reservation()
         {
-            People = new HashSet<Client>();
+            Clients = new HashSet<Client>();
             Room = new Room();
         }
 
         private decimal _price = 0;
 
         public int RoomNum { get; set; }
-        public virtual ICollection<Client> People { get; set; }
+        public virtual ICollection<Client> Clients { get; set; }
         public DateTime Accommodation { get; set; }
         public DateTime Release { get; set; }
         public bool HasBreakfast { get; set; }
@@ -31,9 +31,9 @@ namespace HotelReservationsManager.DAL.Entities
             {
                 var childBeds = 0;
                 var beds = 0;
-                foreach (var person in People)
+                foreach (var client in Clients)
                 {
-                    if (person.IsAdult)
+                    if (client.IsAdult)
                         beds++;
                     else
                         childBeds++;

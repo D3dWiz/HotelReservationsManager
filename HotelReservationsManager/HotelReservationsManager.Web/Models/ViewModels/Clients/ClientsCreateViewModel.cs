@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace HotelReservationsManager.Web.Models.ViewModels.Client
+namespace HotelReservationsManager.Web.Models.ViewModels.Clients
 {
-    public class ClientCreateViewModel
+    public class ClientsCreateViewModel : BaseViewModel
     {
         [Required]
         [MaxLength(50, ErrorMessage = " Oops! First name can't be more than 50 characters.")]
@@ -17,8 +17,8 @@ namespace HotelReservationsManager.Web.Models.ViewModels.Client
         public string Email { get; set; }
 
         [Required]
-        [StringLength(10, ErrorMessage = " {0} must be {2}")]
-        public string PhoneNumber { get; set; }
+        [StringLength(10, ErrorMessage = " Oops! Phone number can't be more than {0} characters.")]
+        public string PhoneNum { get; set; }
 
         [Required]
         public bool IsAdult { get; set; }
