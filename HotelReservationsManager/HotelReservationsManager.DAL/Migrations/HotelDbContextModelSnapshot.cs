@@ -61,10 +61,10 @@ namespace HotelReservationsManager.DAL.Migrations
                     b.Property<DateTime>("Accommodation")
                         .HasColumnType("datetime2");
 
-                    b.Property<bool>("IsAllInclusive")
+                    b.Property<bool>("HasBreakfast")
                         .HasColumnType("bit");
 
-                    b.Property<bool>("IsBreakfast")
+                    b.Property<bool>("IsAllInclusive")
                         .HasColumnType("bit");
 
                     b.Property<decimal>("Price")
@@ -144,13 +144,13 @@ namespace HotelReservationsManager.DAL.Migrations
                     b.Property<string>("LastName")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("MiddleName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Password")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SecondName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Username")
@@ -164,7 +164,7 @@ namespace HotelReservationsManager.DAL.Migrations
             modelBuilder.Entity("HotelReservationsManager.DAL.Entities.Client", b =>
                 {
                     b.HasOne("HotelReservationsManager.DAL.Entities.Reservation", null)
-                        .WithMany("People")
+                        .WithMany("Clients")
                         .HasForeignKey("ReservationId");
                 });
 
@@ -179,7 +179,7 @@ namespace HotelReservationsManager.DAL.Migrations
 
             modelBuilder.Entity("HotelReservationsManager.DAL.Entities.Reservation", b =>
                 {
-                    b.Navigation("People");
+                    b.Navigation("Clients");
                 });
 #pragma warning restore 612, 618
         }
