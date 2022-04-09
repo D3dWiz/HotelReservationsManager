@@ -14,10 +14,14 @@ namespace HotelReservationsManager.BLL.Abstractions
 
         bool CreateRoom(int capacity, string type, bool isAvalable,
             decimal bedPrice, decimal bedPriceChiled, int number);
+
         bool UpdateRoom(int roomId, int capacity, string type, bool isAvalable,
             decimal bedPrice, decimal bedPriceChiled, int number);
+
         List<Room> GetRooms();
+
         Room GetRoomById(int roomId);
+
         bool Remove(int roomId);
     }
 }

@@ -1,7 +1,6 @@
 ﻿using HotelReservationsManager.BLL.Abstractions;
 using HotelReservationsManager.DAL.Abstractions;
 using HotelReservationsManager.DAL.Entities;
-using System;
 using System.Collections.Generic;
 
 namespace HotelReservationsManager.BLL.Services
@@ -9,6 +8,7 @@ namespace HotelReservationsManager.BLL.Services
     public class RoomService : IRoomService
     {
         private readonly IRepository<Room> _roomRepository;
+
         public RoomService(IRepository<Room> roomRepository)
         {
             _roomRepository = roomRepository;
@@ -18,12 +18,12 @@ namespace HotelReservationsManager.BLL.Services
         {
             var room = new Room()
             {
-               Capacity = capacity,
-               Type = type,
-               IsAvalable = isAvalable,
-               BedPrice = bedPrice,
-               BedPriceChild = bedPriceChiled,
-               Number = number
+                Capacity = capacity,
+                Type = type,
+                IsAvalable = isAvalable,
+                BedPrice = bedPrice,
+                BedPriceChild = bedPriceChiled,
+                Number = number
             };
             return _roomRepository.Create(room);
         }

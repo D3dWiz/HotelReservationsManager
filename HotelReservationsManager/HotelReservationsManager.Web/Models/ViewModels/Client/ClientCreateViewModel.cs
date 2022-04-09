@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+
 namespace HotelReservationsManager.Web.Models.ViewModels.Client
 {
     public class ClientCreateViewModel

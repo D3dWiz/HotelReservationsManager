@@ -12,7 +12,7 @@ namespace HotelReservationsManager.DAL.Entities
         }
 
         private decimal _price = 0;
-        
+
         public int RoomNum { get; set; }
         public virtual ICollection<Client> People { get; set; }
         public DateTime Accommodation { get; set; }
@@ -20,7 +20,9 @@ namespace HotelReservationsManager.DAL.Entities
         public bool IsBreakfast { get; set; }
         public bool IsAllInclusive { get; set; }
         public virtual Room Room { get; set; }
-        public decimal Price {
+
+        public decimal Price
+        {
             get
             {
                 return _price;

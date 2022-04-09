@@ -1,15 +1,16 @@
-﻿using System;
-using System.Linq;
-using System.Collections.Generic;
+﻿using HotelReservationsManager.DAL.Abstractions;
 using HotelReservationsManager.DAL.Data;
 using HotelReservationsManager.DAL.Entities;
-using HotelReservationsManager.DAL.Abstractions;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace HotelReservationsManager.DAL.Repositories
 {
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {
         private readonly HotelDbContext _context;
+
         public Repository(HotelDbContext dbContext)
         {
             _context = dbContext;
@@ -29,7 +30,8 @@ namespace HotelReservationsManager.DAL.Repositories
         public T Get(Func<T, bool> predicate)
         {
             return _context.Set<T>()
-                .FirstOrDefault(predicate);        }
+                .FirstOrDefault(predicate);
+        }
 
         public List<T> GetAll()
         {

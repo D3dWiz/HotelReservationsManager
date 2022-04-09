@@ -8,6 +8,7 @@ namespace HotelReservationsManager.BLL.Services
     public class ClientService : IClientService
     {
         private readonly IRepository<Client> _clientRepository;
+
         public ClientService(IRepository<Client> clientRepository)
         {
             _clientRepository = clientRepository;
