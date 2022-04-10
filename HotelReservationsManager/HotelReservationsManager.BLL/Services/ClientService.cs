@@ -1,7 +1,6 @@
 ﻿using HotelReservationsManager.BLL.Abstractions;
 using HotelReservationsManager.DAL.Abstractions;
 using HotelReservationsManager.DAL.Entities;
-using System.Collections.Generic;
 
 namespace HotelReservationsManager.BLL.Services
 {
@@ -14,13 +13,13 @@ namespace HotelReservationsManager.BLL.Services
             _clientRepository = clientRepository;
         }
 
-        public bool CreateClient(string firstName, string lastName, string phoneNum, string email, bool isAdult)
+        public bool CreateClient(string firstName, string lastName, string phone, string email, bool isAdult)
         {
             var client = new Client()
             {
                 FirstName = firstName,
                 LastName = lastName,
-                PhoneNum = phoneNum,
+                Phone = phone,
                 Email = email,
                 IsAdult = isAdult
             };
@@ -42,12 +41,12 @@ namespace HotelReservationsManager.BLL.Services
             return _clientRepository.RemoveById(clientId);
         }
 
-        public bool UpdateClient(int clientId, string firstName, string lastName, string phoneNum, string email, bool isAdult)
+        public bool UpdateClient(int clientId, string firstName, string lastName, string phone, string email, bool isAdult)
         {
             var client = _clientRepository.GetById(clientId);
             client.FirstName = firstName;
             client.LastName = lastName;
-            client.PhoneNum = phoneNum;
+            client.Phone = phone;
             client.Email = email;
             client.IsAdult = isAdult;
 

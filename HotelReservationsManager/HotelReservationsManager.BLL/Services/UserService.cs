@@ -1,8 +1,6 @@
 ﻿using HotelReservationsManager.BLL.Abstractions;
 using HotelReservationsManager.DAL.Abstractions;
 using HotelReservationsManager.DAL.Entities;
-using System;
-using System.Collections.Generic;
 
 namespace HotelReservationsManager.BLL.Services
 {
@@ -15,21 +13,22 @@ namespace HotelReservationsManager.BLL.Services
             _userRepository = userRepository;
         }
 
-        public bool CreateUser(string username, string password, string firstName,
-            string middleName, string lastName, int identificationNumber,
-            string phoneNum, string email, DateTime appointment, bool isActive)
+        public bool CreateUser(string id, string userName, string password, string firstName,
+            string middleName, string lastName, string idn, string phone, string email,
+            DateTime appointmentDate, bool isActive, bool isAdmin)
         {
             var user = new User()
             {
-                Username = username,
+                Id = id,
+                UserName = userName,
                 Password = password,
                 FirstName = firstName,
                 MiddleName = middleName,
                 LastName = lastName,
-                IdentificationNumber = identificationNumber,
-                Phone = phoneNum,
+                IDN = idn,
+                Phone = phone,
                 Email = email,
-                Appointment = appointment,
+                AppointmentDate = appointmentDate,
                 IsActive = isActive
             };
             return _userRepository.Create(user);
@@ -38,7 +37,7 @@ namespace HotelReservationsManager.BLL.Services
         public bool FiredUser(int userId)
         {
             var user = _userRepository.GetById(userId);
-            user.Dismissal = DateTime.Now;
+            user.DismissalDate = DateTime.Now;
             return _userRepository.Update(user);
         }
 
@@ -57,20 +56,20 @@ namespace HotelReservationsManager.BLL.Services
             return _userRepository.RemoveById(userId);
         }
 
-        public bool UpdateUser(int userId, string username, string password,
-            string firstName, string middleName, string lastName,
-            int identificationNumber, string phoneNum, string email, DateTime appointment, bool isActive)
+        public bool UpdateUser(string id, int userId, string userName, string password, string firstName,
+            string middleName, string lastName, string idn, string phone, string email,
+            DateTime appointmentDate, bool isActive, bool isAdmin)
         {
             var user = _userRepository.GetById(userId);
-            user.Username = username;
+            user.UserName = userName;
             user.Password = password;
             user.FirstName = firstName;
             user.MiddleName = middleName;
             user.LastName = lastName;
-            user.IdentificationNumber = identificationNumber;
-            user.Phone = phoneNum;
+            user.IDN = idn;
+            user.Phone = phone;
             user.Email = email;
-            user.Appointment = appointment;
+            user.AppointmentDate = appointmentDate;
             user.IsActive = isActive;
 
             return _userRepository.Update(user);

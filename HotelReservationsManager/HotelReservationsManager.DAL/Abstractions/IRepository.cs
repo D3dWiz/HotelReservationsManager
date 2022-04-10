@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace HotelReservationsManager.DAL.Abstractions
+﻿namespace HotelReservationsManager.DAL.Abstractions
 {
     public interface IRepository<T>
     {

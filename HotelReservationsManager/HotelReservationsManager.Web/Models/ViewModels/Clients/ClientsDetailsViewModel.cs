@@ -1,9 +1,8 @@
 ﻿using HotelReservationsManager.Web.Models.ViewModels.Reservations;
-using System.Collections.Generic;
 
 namespace HotelReservationsManager.Web.Models.ViewModels.Clients
 {
-    public class ClientsDetailsViewModel
+    public class ClientsDetailsViewModel : BaseViewModel
     {
         public string Id { get; set; }
         public string FullName { get; set; }

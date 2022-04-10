@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-namespace HotelReservationsManager.Web.Models.ViewModels.Users
+﻿namespace HotelReservationsManager.Web.Models.ViewModels.Users
 {
     public class UsersAllViewModel
     {

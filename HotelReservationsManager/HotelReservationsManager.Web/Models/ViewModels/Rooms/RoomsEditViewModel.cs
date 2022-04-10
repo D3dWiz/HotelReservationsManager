@@ -1,24 +1,27 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System;
+﻿using HotelReservationsManager.DAL.Entities.Enumeration;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace HotelReservationsManager.Web.Models.ViewModels.Rooms
 {
     public class RoomsEditViewModel
     {
+        [HiddenInput]
+        public int? Id { get; set; }
         [Required]
         [Range(1, 5, ErrorMessage = "Negative values or 0 or values ​​above 5 are not accepted")]
         public int Capacity { get; set; }
 
         [Required]
-        public string Type { get; set; }
+        [EnumDataType(typeof(RoomType))]
+        public RoomType Type { get; set; }
 
         [Required]
-        public bool IsAvalable { get; set; }
+        public bool IsAvailable { get; set; }
 
         [Required]
         [Range(0, double.MaxValue, ErrorMessage = "Negative values are not accepted")]
-        public decimal BedPrice { get; set; }
+        public decimal BedPriceAdult { get; set; }
 
         [Required]
         [Range(0, double.MaxValue, ErrorMessage = "Negative values are not accepted")]
@@ -28,7 +31,5 @@ namespace HotelReservationsManager.Web.Models.ViewModels.Rooms
         [StringLength(6, MinimumLength = 2, ErrorMessage = "Must be at least 2 characters long. Cannot be more than 6 characters")]
         public string Number { get; set; }
 
-        [HiddenInput]
-        public string Id { get; set; }
     }
 }

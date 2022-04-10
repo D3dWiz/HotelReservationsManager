@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace HotelReservationsManager.Web.Models.ViewModels.Rooms
+﻿namespace HotelReservationsManager.Web.Models.ViewModels.Rooms
 {
     public class RoomsAllViewModel
     {

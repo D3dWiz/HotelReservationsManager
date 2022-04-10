@@ -1,17 +1,15 @@
-﻿using System.Linq;
-using System.Threading.Tasks;
+﻿using HotelReservationsManager.DAL.Entities;
+using HotelReservationsManager.Web.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using HotelReservationsManager.DAL.Entities;
-using HotelReservationsManager.DAL.Data;
 
 namespace HotelReservationsManager.Web.Controllers
 {
     public class RoomsController : Controller
     {
-        private readonly HotelDbContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public RoomsController(HotelDbContext context)
+        public RoomsController(ApplicationDbContext context)
         {
             _context = context;
         }
@@ -51,7 +49,7 @@ namespace HotelReservationsManager.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Capacity,Type,IsAvailable,BedPrice,BedPriceChild,Number,Id")] Room room)
+        public async Task<IActionResult> Create([Bind("Capacity,Type,IsAvailable,BedPriceAdult,BedPriceChild,Number,Id,CreatedAt,ModifiedAt")] Room room)
         {
             if (ModelState.IsValid)
             {
@@ -83,7 +81,7 @@ namespace HotelReservationsManager.Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Capacity,RoomType,IsFree,PriceAdult,PriceChild,Number,Id")] Room room)
+        public async Task<IActionResult> Edit(int id, [Bind("Capacity,Type,IsAvailable,BedPriceAdult,BedPriceChild,Number,Id,CreatedAt,ModifiedAt")] Room room)
         {
             if (id != room.Id)
             {

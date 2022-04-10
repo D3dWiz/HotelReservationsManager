@@ -18,7 +18,7 @@ namespace HotelReservationsManager.Web.Models.ViewModels.Clients
 
         [Required]
         [StringLength(10, ErrorMessage = " Oops! Phone number can't be more than {0} characters.")]
-        public string PhoneNum { get; set; }
+        public string Phone { get; set; }
 
         [Required]
         public bool IsAdult { get; set; }

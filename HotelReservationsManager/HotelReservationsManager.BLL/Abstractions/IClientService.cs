@@ -1,16 +1,9 @@
 ﻿using HotelReservationsManager.DAL.Entities;
-using System.Collections.Generic;
 
 namespace HotelReservationsManager.BLL.Abstractions
 {
     public interface IClientService
     {
-        //string FirstName
-        //string LastName
-        //string PhoneNum
-        //string Email
-        //bool IsAdult
-
         bool CreateClient(string firstName, string lastName,
             string phoneNum, string email, bool isAdult);
 

@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationsManager.DAL", "HotelReservationsManager.DAL\HotelReservationsManager.DAL.csproj", "{ED4532BC-6642-4AE1-A0BE-18A6B82C1121}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationsManager.BLL", "HotelReservationsManager.BLL\HotelReservationsManager.BLL.csproj", "{784E8025-125C-4F4D-AF26-C190AD87BE10}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationsManager.BLL", "HotelReservationsManager.BLL\HotelReservationsManager.BLL.csproj", "{DE97A605-5AA8-48FE-9E7E-8337A0C5A4BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationsManager.DAL", "HotelReservationsManager.DAL\HotelReservationsManager.DAL.csproj", "{1A5F5702-E1C2-4D83-AE14-648A79D35543}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationsManager", "HotelReservationsManager\HotelReservationsManager.csproj", "{2F4CF7FE-BBB2-4877-AC38-BF7B9B973EAD}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HotelReservationsManager.Web", "HotelReservationsManager.Web\HotelReservationsManager.Web.csproj", "{A38F58F6-2650-4A3E-AF70-1A86DCED2402}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HotelReservationsManager.Web", "HotelReservationsManager.Web\HotelReservationsManager.Web.csproj", "{70DB9446-AEA0-497D-8F28-848F36CB2A70}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,27 +15,23 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ED4532BC-6642-4AE1-A0BE-18A6B82C1121}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED4532BC-6642-4AE1-A0BE-18A6B82C1121}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED4532BC-6642-4AE1-A0BE-18A6B82C1121}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED4532BC-6642-4AE1-A0BE-18A6B82C1121}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DE97A605-5AA8-48FE-9E7E-8337A0C5A4BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE97A605-5AA8-48FE-9E7E-8337A0C5A4BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE97A605-5AA8-48FE-9E7E-8337A0C5A4BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE97A605-5AA8-48FE-9E7E-8337A0C5A4BC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F4CF7FE-BBB2-4877-AC38-BF7B9B973EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F4CF7FE-BBB2-4877-AC38-BF7B9B973EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F4CF7FE-BBB2-4877-AC38-BF7B9B973EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F4CF7FE-BBB2-4877-AC38-BF7B9B973EAD}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A38F58F6-2650-4A3E-AF70-1A86DCED2402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A38F58F6-2650-4A3E-AF70-1A86DCED2402}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A38F58F6-2650-4A3E-AF70-1A86DCED2402}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A38F58F6-2650-4A3E-AF70-1A86DCED2402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{784E8025-125C-4F4D-AF26-C190AD87BE10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{784E8025-125C-4F4D-AF26-C190AD87BE10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{784E8025-125C-4F4D-AF26-C190AD87BE10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{784E8025-125C-4F4D-AF26-C190AD87BE10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A5F5702-E1C2-4D83-AE14-648A79D35543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A5F5702-E1C2-4D83-AE14-648A79D35543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A5F5702-E1C2-4D83-AE14-648A79D35543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A5F5702-E1C2-4D83-AE14-648A79D35543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70DB9446-AEA0-497D-8F28-848F36CB2A70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70DB9446-AEA0-497D-8F28-848F36CB2A70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70DB9446-AEA0-497D-8F28-848F36CB2A70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70DB9446-AEA0-497D-8F28-848F36CB2A70}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {45E013CA-6D9B-45C7-8C9D-CF87409AABAB}
+		SolutionGuid = {FDDC6D00-02F1-4117-B394-966779010622}
 	EndGlobalSection
 EndGlobal

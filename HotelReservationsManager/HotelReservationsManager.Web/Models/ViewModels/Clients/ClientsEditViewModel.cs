@@ -1,11 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace HotelReservationsManager.Web.Models.ViewModels.Clients
 {
     public class ClientsEditViewModel : BaseViewModel
     {
-
         [Required]
         [MaxLength(50, ErrorMessage = " Oops! First Name can't be more than {0} characters.")]
         public string FirstName { get; set; }
@@ -20,7 +18,7 @@ namespace HotelReservationsManager.Web.Models.ViewModels.Clients
 
         [Required]
         [StringLength(10, ErrorMessage = " Oops! Phone number can't be more than {0} characters.")]
-        public string PhoneNum { get; set; }
+        public string Phone { get; set; }
 
         [Required]
         public bool IsAdult { get; set; }

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using HotelReservationsManager.DAL.Entities;
 using System.ComponentModel.DataAnnotations;
-using HotelReservationsManager.DAL.Entities;
+
 namespace HotelReservationsManager.Web.Models.ViewModels.Reservations
 {
     public class ReservationsViewModel : BaseViewModel

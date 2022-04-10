@@ -1,22 +1,11 @@
 ﻿using HotelReservationsManager.DAL.Entities;
-using System;
-using System.Collections.Generic;
 
 namespace HotelReservationsManager.BLL.Abstractions
 {
     public interface IReservationService
     {
-        //int RoomNum
-        //ICollection<ClientReservations> Clients
-        //DateTime Accommodation
-        //DateTime Release
-        //bool HasBreakfast
-        //bool IsAllInclusive
-        //Room Room
-        //decimal Price
-
-        bool CreateReservation(int roomNum, DateTime accommodation, DateTime release,
-            bool hasBreakfast, bool isAllInclusive, Room room);
+        bool CreateReservation(int roomId, Room room, DateTime accommodationDate, DateTime releaseDate,
+            bool hasBreakfast, bool isAllInclusive);
 
         List<Reservation> GetReservations();
 

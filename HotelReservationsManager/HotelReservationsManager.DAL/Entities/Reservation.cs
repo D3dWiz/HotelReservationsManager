@@ -1,25 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace HotelReservationsManager.DAL.Entities
+﻿namespace HotelReservationsManager.DAL.Entities
 {
     public class Reservation : BaseEntity
     {
         public Reservation()
         {
-            Clients = new HashSet<Client>();
-            Room = new Room();
+            ClientReservationHistory = new HashSet<ClientReservationHistory>();
+        }
+
+        public Reservation(Reservation reservation)
+        {
+            Id = reservation.Id;
+            Room = new Room(reservation.Room);
+            User = new User(reservation.User);
+            AccommodationDate = reservation.AccommodationDate;
+            IsAllInclusive = reservation.IsAllInclusive;
+            Price = reservation.Price;
+            ClientReservationHistory = reservation.ClientReservationHistory;
         }
 
         private decimal _price = 0;
 
-        public int RoomNum { get; set; }
-        public virtual ICollection<Client> Clients { get; set; }
-        public DateTime Accommodation { get; set; }
-        public DateTime Release { get; set; }
+        public int RoomId { get; set; }
+        public virtual Room Room { get; set; }
+        public int UserId { get; set; }
+        public virtual User User { get; set; }
+        public DateTime AccommodationDate { get; set; }
+        public DateTime ReleaseDate { get; set; }
         public bool HasBreakfast { get; set; }
         public bool IsAllInclusive { get; set; }
-        public virtual Room Room { get; set; }
 
         public decimal Price
         {
@@ -38,9 +46,12 @@ namespace HotelReservationsManager.DAL.Entities
                     else
                         childBeds++;
                 }
-                _price = (Release - Accommodation).Days *
-                    (Room.BedPriceChild * childBeds + Room.BedPrice * beds);
+                _price = (ReleaseDate - AccommodationDate).Days *
+                    (Room.BedPriceChild * childBeds + Room.BedPriceAdult * beds);
             }
         }
+
+        public virtual ICollection<Client> Clients { get; set; }
+        public virtual ICollection<ClientReservationHistory> ClientReservationHistory { get; set; }
     }
 }

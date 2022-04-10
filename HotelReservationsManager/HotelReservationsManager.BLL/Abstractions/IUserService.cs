@@ -1,30 +1,16 @@
 ﻿using HotelReservationsManager.DAL.Entities;
-using System;
-using System.Collections.Generic;
 
 namespace HotelReservationsManager.BLL.Abstractions
 {
     public interface IUserService
     {
-        //string Username
-        //string Password
-        //string FirstName
-        //string MiddleName
-        //string LastName
-        //int IdentificationNumber
-        //string Phone
-        //string Email
-        //DateTime Appointment
-        //bool IsActive
-        //DateTime? Dismissal
+        bool CreateUser(string id, string userName, string password, string firstName,
+            string middleName, string lastName, string idn, string phone, string email,
+            DateTime appointmentDate, bool isActive, bool isAdmin);
 
-        bool CreateUser(string username, string password, string firstName,
-            string middleName, string lastName, int identificationNumber,
-            string phoneNum, string email, DateTime appointment, bool isActive);
-
-        bool UpdateUser(int userId, string username, string password, string firstName,
-            string middleName, string lastName, int identificationNumber,
-            string phoneNum, string email, DateTime appointment, bool isActive);
+        bool UpdateUser(string id, int userId, string userName, string password, string firstName,
+            string middleName, string lastName, string idn, string phone, string email,
+            DateTime appointmentDate, bool isActive, bool isAdmin);
 
         List<User> GetUsers();
 

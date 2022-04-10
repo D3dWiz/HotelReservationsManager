@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-
-namespace HotelReservationsManager.Web.Models.ViewModels.Clients
+﻿namespace HotelReservationsManager.Web.Models.ViewModels.Clients
 {
-    public class ClientsAllViewModel
+    public class ClientsAllViewModel : BaseViewModel
     {
         public PageViewModel Page { get; set; }
 

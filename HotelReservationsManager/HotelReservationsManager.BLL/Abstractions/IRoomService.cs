@@ -1,27 +1,19 @@
 ﻿using HotelReservationsManager.DAL.Entities;
-using System.Collections.Generic;
 
 namespace HotelReservationsManager.BLL.Abstractions
 {
     public interface IRoomService
     {
-        //Capacity
-        //Type
-        //IsAvalable
-        //BedPrice
-        //BedPriceChild
-        //Number
+        bool CreateRoom(int id, int capacity, string type, bool isAvalable,
+            decimal bedPriceAdult, decimal bedPriceChild, int number);
 
-        bool CreateRoom(int capacity, string type, bool isAvalable,
-            decimal bedPrice, decimal bedPriceChiled, int number);
-
-        bool UpdateRoom(int roomId, int capacity, string type, bool isAvalable,
-            decimal bedPrice, decimal bedPriceChiled, int number);
+        bool UpdateRoom(int id, int capacity, string type, bool isAvalable,
+            decimal bedPriceAdult, decimal bedPriceChild, int number);
 
         List<Room> GetRooms();
 
-        Room GetRoomById(int roomId);
+        Room GetRoomById(int id);
 
-        bool Remove(int roomId);
+        bool Remove(int id);
     }
 }

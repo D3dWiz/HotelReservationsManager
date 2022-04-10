@@ -1,26 +1,25 @@
-﻿using HotelReservationsManager.BLL.Abstractions;
-using HotelReservationsManager.DAL.Abstractions;
+﻿using HotelReservationsManager.DAL.Abstractions;
 using HotelReservationsManager.DAL.Entities;
-using System;
-using System.Collections.Generic;
 
 namespace HotelReservationsManager.BLL.Services
 {
-    public class ReservationService : IReservationService
+    public class ReservationService
     {
         private readonly IRepository<Reservation> _reservationRepository;
+
         public ReservationService(IRepository<Reservation> reservationRepository)
         {
             _reservationRepository = reservationRepository;
         }
 
-        public bool CreateReservation(int roomNum, DateTime accommodation, DateTime release, bool hasBreakfast, bool isAllInclusive, Room room)
+        public bool CreateReservation(int roomId, Room room, DateTime accommodationDate, DateTime releaseDate,
+            bool hasBreakfast, bool isAllInclusive)
         {
             var reservation = new Reservation()
             {
-                RoomNum = roomNum,
-                Accommodation = accommodation,
-                Release = release,
+                RoomId = roomId,
+                AccommodationDate = accommodationDate,
+                ReleaseDate = releaseDate,
                 HasBreakfast = hasBreakfast,
                 IsAllInclusive = isAllInclusive,
                 Room = room
